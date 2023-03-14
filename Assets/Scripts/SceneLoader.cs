@@ -8,11 +8,17 @@ namespace AngelaChau
 {
     public class SceneLoader : MonoBehaviour
     {
-        //private int piratePick = 0;
-        private int pirateDeclare = 1;
-        private int captainCheckIn = 2;
+        private int piratePick = 1;
+        private int pirateDeclare = 2;
+        private int captainCheckIn = 3;
         //goodID includes FishID:0, CoconutsID: 1
         public static int goodID = 0;
+        private int openTheChest = 4;
+
+        public void PiratePick()
+        {
+            SceneManager.LoadScene(piratePick);
+        }
 
         public void ButtonToPirateDeclare()
         {
@@ -36,5 +42,10 @@ namespace AngelaChau
         //{
         //    SceneManager.LoadScene();
         //}
+
+        public void OpenTheDeclaredChest()
+        {
+            SceneManager.LoadScene(openTheChest);
+        }
     }
 }
